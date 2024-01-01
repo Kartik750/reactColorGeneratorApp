@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 5s ease-in-out;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: contrast(100%) blur(50px);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px black;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+form, main{
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 2s ease-in-out;
+}
+
+.showColor{
+  height: 300px;
+  width: 300px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px transparent;
+  backdrop-filter: blur(20px);
+  margin: 10px 0px;
+}
+
+.showColor p{
+  font-size: 18px;
+}
+
+.writeColor{
+  margin: 10px 0px;
+  height: 45px;
+}
+
+.writeColor label{
+  position: absolute;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: -10px;
+  margin-left: -300px;
+  padding: 3px;
+  font-size: 14px;
+  transition: all 0.2s ease-out;
+}
+
+.writeColor input{
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  border: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+.writeColor input:hover{
+  color: black;
+  background-color: rgb(205, 255, 238);
+}
+.writeColor input:active{
+  color: rgb(12, 84, 115);
+  transform: scale(1.5);
+  background-color: rgb(205, 255, 238);
+  box-shadow: 0px 0px 10px black;
+}
+.writeColor input:focus{
+  color: rgb(12, 84, 115);
+  transform: scale(1.05);
+  background-color: rgb(205, 255, 238);
+  box-shadow: 0px 0px 2px rgb(125, 125, 125);
+  font-size: 18px;
+}
+
+#itext:hover ~ #ilabel{
+  transform: translateX(100px) translateY(20px) scale(0);
+}
+#itext:focus ~ #ilabel{
+  transform: translateX(100px) translateY(20px) scale(0);
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: grayscale(100%);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  box-shadow: 0px 0px 5px black;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  backdrop-filter: contrast(100%) blur(50px);
+}
+
+.fontColorChanger{
+  margin: 10px 0px;
+  border-radius: 5px;
+}
+
+.fontColorChanger button{
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.fontColorChanger button:hover{
+  background-color: red;
+  color: white;
+}
+.fontColorChanger button:active{
+  background-color: black;
+  color: red;
+  transform: scale(0.8);
+}
